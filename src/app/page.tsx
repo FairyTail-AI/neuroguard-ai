@@ -16,35 +16,68 @@ import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
+import {Particles} from "@/components/magicui/particles";
+import {HyperText} from "@/components/magicui/hyper-text";
+import Spline from '@splinetool/react-spline/next';
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'NeuroGuard AI helps you to detect brain decease before symptoms appear.',
 }
 
 function Hero() {
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
-      <Container className="relative">
+      <div className='absolute inset-y-0 right-0 z-10 animate-fade-in'>
+        <Spline
+          className="transform"
+          scene="https://prod.spline.design/AX9deDCXrVqvrJng/scene.splinecode"
+        />
+      </div>
+      <Particles
+        className="absolute inset-0 z-5 animate-fade-in"
+        quantity={100}
+      />
+      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset">
+        <div className='absolute bottom-3 right-2 z-20 bg-black w-40 h-18'/>
+      </Gradient>
+      <Container className="relative z-20">
+
         <Navbar
-          banner={
-            <Link
-              href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
-              className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
-            >
-              Radiant raises $100M Series A from Tailwind Ventures
-              <ChevronRightIcon className="size-4" />
-            </Link>
-          }
+          // banner={
+          //   <Link
+          //     href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
+          //     className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
+          //   >
+          //     NeuroGuard AI raises $100M Series A from Tailwind Ventures
+          //     <ChevronRightIcon className="size-4" />
+          //   </Link>
+          // }
         />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
-          <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Close every deal.
+          <h1
+            className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-100 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
+            AI-powered
+            {" "}
+            {/*<HyperText as='span'*/}
+            {/*           className="font-display text-6xl/[0.9] font-medium tracking-tight text-teal-400 sm:text-8xl/[0.8] md:text-9xl/[0.8]">*/}
+            {/*  detection*/}
+            {/*</HyperText>*/}
+            <span className="text-teal-400">
+              detection
+            </span>
+            {" "}
+            {/*<span className="text-6xl/[0.9]">*/}
+            {/*  of early neurodegeneration.*/}
+            {/*</span>*/}
+            of early neurodegeneration.
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Radiant helps you sell more by revealing sensitive information about
-            your customers.
+          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-200/75 sm:text-2xl/8">
+            Transforming neurology with clinically-validated, cloud-based AI software that detects brain atrophy
+            {' '}
+            <span className="text-teal-500">
+              before symptoms appear.
+            </span>
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="#">Get started</Button>
@@ -53,6 +86,7 @@ function Hero() {
             </Button>
           </div>
         </div>
+
       </Container>
     </div>
   )
@@ -88,7 +122,7 @@ function BentoSection() {
         <BentoCard
           eyebrow="Insight"
           title="Get perfect clarity"
-          description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
+          description="NeuroGuard AI uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
           graphic={
             <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
           }
@@ -126,7 +160,7 @@ function BentoSection() {
         <BentoCard
           eyebrow="Limitless"
           title="Sell globally"
-          description="Radiant helps you sell in locations currently under international embargo."
+          description="NeuroGuard AI helps you sell in locations currently under international embargo."
           graphic={<Map />}
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />

@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s - NeuroGuard AI',
+    default: 'NeuroGuard - AI-powered detection of early neurodegeneration',
   },
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="The Radiant Blog"
+          title="NeuroGuard AI Blog"
           href="/blog/feed.xml"
         />
       </head>
