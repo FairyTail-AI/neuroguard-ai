@@ -11,20 +11,28 @@ export const client = createClient({
 })
 
 export async function sanityFetch<const QueryString extends string>({
-                                                                      query,
-                                                                      params = {},
-                                                                      revalidate = 60,
-                                                                      tags = [],
-                                                                    }: {
+  query,
+  params = {},
+  revalidate = 60,
+  tags = [],
+}: {
   query: QueryString
   params?: QueryParams
   revalidate?: number | false
   tags?: string[]
 }) {
-  return client.fetch(query, params, {
-    next: {
-      revalidate: isDevelopment || tags.length ? false : revalidate,
-      tags,
+  return client.fetch(
+    query,
+    params,
+    // {
+    //   // @ts-ignore
+    //   cache: 'no-store',
+    // },
+    {
+      next: {
+        revalidate: isDevelopment || tags.length ? false : revalidate,
+        tags,
+      },
     },
-  })
+  )
 }

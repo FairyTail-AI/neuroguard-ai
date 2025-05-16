@@ -11,8 +11,8 @@ export async function GET(req: Request) {
     description:
       'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
     author: {
-      name: 'Michael Foster',
-      email: 'michael.foster@example.com',
+      name: 'Karina Sekenova',
+      email: 'karina.sekenova@gmail.com',
     },
     id: siteUrl,
     link: siteUrl,
