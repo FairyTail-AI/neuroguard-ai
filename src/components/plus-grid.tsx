@@ -13,9 +13,11 @@ export function PlusGrid({
 export function PlusGridRow({
   className = '',
   children,
+  color = 'black'
 }: {
   className?: string
   children: React.ReactNode
+  color?: 'black' | 'white'
 }) {
   return (
     <div
@@ -28,10 +30,34 @@ export function PlusGridRow({
         aria-hidden="true"
         className="absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2"
       >
-        <div className="absolute inset-x-0 top-0 border-t border-black/5"></div>
-        <div className="absolute inset-x-0 top-2 border-t border-black/5"></div>
-        <div className="absolute inset-x-0 bottom-0 hidden border-b border-black/5 group-last/row:block"></div>
-        <div className="absolute inset-x-0 bottom-2 hidden border-b border-black/5 group-last/row:block"></div>
+        <div
+          className={clsx(
+            "absolute inset-x-0 top-0 border-t",
+            color === 'white' && 'border-white/5',
+            color === 'black' && 'border-black/5',
+          )}
+        />
+        <div
+          className={clsx(
+            `absolute inset-x-0 top-2 border-t`,
+            color === 'white' && 'border-white/5',
+            color === 'black' && 'border-black/5',
+          )}
+        />
+        <div
+          className={clsx(
+            `absolute inset-x-0 bottom-0 hidden border-b group-last/row:block`,
+            color === 'white' && 'border-white/5',
+            color === 'black' && 'border-black/5',
+          )}
+        />
+        <div
+          className={clsx(
+            `absolute inset-x-0 bottom-2 hidden border-b group-last/row:block`,
+            color === 'white' && 'border-white/5',
+            color === 'black' && 'border-black/5',
+          )}
+        />
       </div>
       {children}
     </div>
@@ -41,24 +67,32 @@ export function PlusGridRow({
 export function PlusGridItem({
   className = '',
   children,
+  color = 'black'
 }: {
   className?: string
   children: React.ReactNode
+  color?: 'black' | 'white'
 }) {
   return (
     <div className={clsx(className, 'group/item relative')}>
       <PlusGridIcon
         placement="top left"
         className="hidden group-first/item:block"
+        color={color}
       />
-      <PlusGridIcon placement="top right" />
+      <PlusGridIcon
+        placement="top right"
+        color={color}
+      />
       <PlusGridIcon
         placement="bottom left"
         className="hidden group-first/item:group-last/row:block"
+        color={color}
       />
       <PlusGridIcon
         placement="bottom right"
         className="hidden group-last/row:block"
+        color={color}
       />
       {children}
     </div>
@@ -68,9 +102,11 @@ export function PlusGridItem({
 export function PlusGridIcon({
   className = '',
   placement,
+  color = 'black'
 }: {
   className?: string
   placement: `${'top' | 'bottom'} ${'right' | 'left'}`
+  color?: 'black' | 'white'
 }) {
   let [yAxis, xAxis] = placement.split(' ')
 
@@ -83,7 +119,9 @@ export function PlusGridIcon({
       aria-hidden="true"
       className={clsx(
         className,
-        'absolute size-[15px] fill-black/10',
+        `absolute size-[15px]`,
+        color === 'black' && 'fill-black/10',
+        color === 'white' && 'fill-white/10',
         yClass,
         xClass,
       )}

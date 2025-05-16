@@ -22,7 +22,7 @@ function DesktopNav() {
   return (
     <nav className="relative hidden lg:flex">
       {links.map(({ href, label }) => (
-        <PlusGridItem key={href} className="relative flex">
+        <PlusGridItem key={href} className="relative flex" color='white'>
           <Link
             href={href}
             className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:bg-black/[2.5%]"
@@ -79,11 +79,14 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16">
       <PlusGrid>
-        <PlusGridRow className="relative flex justify-between">
+        <PlusGridRow className="relative flex justify-between" color='white'>
           <div className="relative flex gap-6">
-            <PlusGridItem className="py-3">
-              <Link href="/" title="Home">
-                <Logo className="h-9" />
+            <PlusGridItem className="py-3" color='white'>
+              <Link href="/" title="Home" className="flex items-center gap-2">
+                <Logo className="h-9 fill-white"/>
+                <p className='text-white font-display font-medium text-xl'>
+                  NeuroGuard AI
+                </p>
               </Link>
             </PlusGridItem>
             {banner && (
