@@ -8,8 +8,7 @@ export async function GET(req: Request) {
 
   let feed = new Feed({
     title: 'The NeuroGuard AI Blog',
-    description:
-      'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+    description: 'Stay informed with breakthrough neurological diagnostics, company achievements, and insights on advancing brain health innovation.',
     author: {
       name: 'Karina Sekenova',
       email: 'karina.sekenova@gmail.com',

@@ -10,22 +10,31 @@ import { motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
+import {cn} from "@/lib/utils";
 
 const links = [
-  { href: '/pricing', label: 'Pricing' },
+  // { href: '/pricing', label: 'Pricing' },
   { href: '/company', label: 'Company' },
   { href: '/blog', label: 'Blog' },
-  { href: '/login', label: 'Login' },
+  // { href: '/login', label: 'Login' },
 ]
 
-function DesktopNav() {
+function DesktopNav({
+  color = 'black',
+}: {
+  color?: 'white' | 'black'
+}) {
   return (
     <nav className="relative hidden lg:flex">
       {links.map(({ href, label }) => (
-        <PlusGridItem key={href} className="relative flex" color='white'>
+        <PlusGridItem key={href} className="relative flex" color={color}>
           <Link
             href={href}
-            className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:bg-black/[2.5%]"
+            className={cn(
+              "flex items-center px-4 py-3 text-base font-medium bg-blend-multiply data-hover:bg-black/[2.5%]",
+              color === 'white' && 'text-white',
+              color === 'black' && 'text-black',
+            )}
           >
             {label}
           </Link>
@@ -75,16 +84,34 @@ function MobileNav() {
   )
 }
 
-export function Navbar({ banner }: { banner?: React.ReactNode }) {
+export function Navbar({
+  banner,
+  color = 'black',
+}: {
+  banner?: React.ReactNode,
+  color?: 'white' | 'black'
+}) {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16">
       <PlusGrid>
-        <PlusGridRow className="relative flex justify-between" color='white'>
+        <PlusGridRow className="relative flex justify-between" color={color}>
           <div className="relative flex gap-6">
-            <PlusGridItem className="py-3" color='white'>
+            <PlusGridItem className="py-3" color={color}>
               <Link href="/" title="Home" className="flex items-center gap-2">
-                <Logo className="h-9 fill-white"/>
-                <p className='text-white font-display font-medium text-xl'>
+                <Logo
+                  className={cn(
+                    "h-9",
+                    color === 'white' && 'fill-white',
+                    color === 'black' && 'fill-black',
+                  )}
+                />
+                <p
+                  className={cn(
+                    'font-display font-medium text-xl',
+                    color === 'white' && 'text-white',
+                    color === 'black' && 'text-black',
+                  )}
+                >
                   NeuroGuard AI
                 </p>
               </Link>
@@ -95,7 +122,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
               </div>
             )}
           </div>
-          <DesktopNav />
+          <DesktopNav color={color} />
           <MobileNavButton />
         </PlusGridRow>
       </PlusGrid>

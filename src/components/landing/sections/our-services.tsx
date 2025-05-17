@@ -2,12 +2,14 @@ import {Container} from "@/components/container";
 import {Heading, Subheading} from "@/components/text";
 import {BentoCard} from "@/components/bento-card";
 
-export function FeaturesSection() {
+export function OurServices() {
   return (
     <Container>
-      <Subheading>Features</Subheading>
+      <Subheading>
+        Empowering early detection and personalized neurological care with cutting-edge AI solutions.
+      </Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        Know more about your clients than they do.
+        Our Services
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -15,9 +17,9 @@ export function FeaturesSection() {
           eyebrow="Track"
           title="Brain Volumetry"
           description="Our system provides precise measurements of brain volume changes, accessible from any device with cloud storage. Monitor neurodegenerative diseases with accuracy that traditional methods can't match."
-          graphic={
-            <div className="h-80 bg-[url(/screenshots/brain.png)] bg-[left_0_top_-112px] bg-no-repeat bg-cover" />
-          }
+          // graphic={
+          //   <div className="h-80 bg-[url(/screenshots/brain.png)] bg-[left_0_top_-112px] bg-no-repeat bg-cover" />
+          // }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
@@ -25,9 +27,9 @@ export function FeaturesSection() {
           eyebrow="Accuracy"
           title="Brain Segmentation"
           description="Our automated system identifies and labels brain regions in MRI scans with unmatched precision. Detect structural abnormalities before they become clinically apparent and gain insights others can't see."
-          graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
-          }
+          // graphic={
+          //   <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
+          // }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />

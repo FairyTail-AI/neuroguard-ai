@@ -19,9 +19,10 @@ import type { Metadata } from 'next'
 import {Particles} from "@/components/magicui/particles";
 import {HyperText} from "@/components/magicui/hyper-text";
 import Spline from '@splinetool/react-spline/next';
-import {FeaturesSection} from "@/components/landing/sections/features";
+import {OurServices} from "@/components/landing/sections/our-services";
 import {cn} from "@/lib/utils";
 import {Partners} from "@/components/landing/sections/partners";
+import {ScreenshotSection} from "@/components/landing/sections/screenshot-section";
 
 export const metadata: Metadata = {
   description:
@@ -41,21 +42,22 @@ function Hero() {
         className="absolute inset-0 z-5 animate-fade-in"
         quantity={100}
       />
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset">
+      <Gradient isDark className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset">
         <div className='absolute bottom-3 right-2 z-20 bg-black w-40 h-18'/>
       </Gradient>
       <Container className="relative z-20">
 
         <Navbar
-          // banner={
-          //   <Link
-          //     href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
-          //     className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
-          //   >
-          //     NeuroGuard AI raises $100M Series A from Tailwind Ventures
-          //     <ChevronRightIcon className="size-4" />
-          //   </Link>
-          // }
+          color='white'
+          banner={
+            <Link
+              href="/blog/neuroguard-ai-joins-nvidia-inception-program"
+              className="flex items-center gap-1 rounded-full bg-teal-700/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-teal-700/30"
+            >
+              NeuroGuard AI Joins NVIDIA Inception Program
+              <ChevronRightIcon className="size-4" />
+            </Link>
+          }
         />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           {/*<h1*/}
@@ -64,7 +66,7 @@ function Hero() {
           {/*</h1>*/}
           <h1
             className={cn(
-              "font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-100 sm:text-8xl/[0.8] md:text-9xl/[0.8]",
+              "font-display text-4xl/[0.9] font-medium tracking-tight text-balance text-gray-100 sm:text-8xl/[0.8] md:text-9xl/[0.8]",
               "text-balance"
               // "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-400 bg-clip-text"
             )}>
@@ -91,7 +93,9 @@ function Hero() {
             </span>
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
+            <Button href="#">
+              Request Demo
+            </Button>
             <Button variant="secondary" href="/pricing">
               See pricing
             </Button>
@@ -103,23 +107,6 @@ function Hero() {
   )
 }
 
-function FeatureSection() {
-  return (
-    <div className="overflow-hidden">
-      <Container className="pb-24">
-        <Heading as="h2" className="max-w-3xl">
-          A snapshot of your entire sales pipeline.
-        </Heading>
-        <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem]"
-        />
-      </Container>
-    </div>
-  )
-}
 
 
 export default function Home() {
@@ -130,11 +117,11 @@ export default function Home() {
 
       <main>
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
-          {/*<FeatureSection />*/}
-          <FeaturesSection />
+          <ScreenshotSection />
+          <OurServices />
         </div>
       </main>
-      {/*<Testimonials />*/}
+      <Testimonials />
       <Footer />
     </div>
   )

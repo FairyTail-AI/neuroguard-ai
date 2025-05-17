@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: {
     template: '%s - NeuroGuard AI',
-    default: 'NeuroGuard - AI-powered detection of early neurodegeneration',
+    default: 'NeuroGuard - AI-powered Early Detection for Neurodegenerative Diseases',
   },
 }
 

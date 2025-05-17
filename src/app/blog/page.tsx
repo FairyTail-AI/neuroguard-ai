@@ -28,7 +28,7 @@ import { notFound } from 'next/navigation'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+    'Stay informed with breakthrough neurological diagnostics, company achievements, and insights on advancing brain health innovation.',
 }
 
 const postsPerPage = 5
@@ -294,8 +294,7 @@ export default async function Blog({
           What’s happening at NeuroGuard AI.
         </Heading>
         <Lead className="mt-6 max-w-3xl">
-          Stay informed with product updates, company news, and insights on how
-          to sell smarter at your company.
+          Stay informed with breakthrough neurological diagnostics, company achievements, and insights on advancing brain health innovation.
         </Lead>
       </Container>
       {page === 1 && !category && <FeaturedPosts />}
