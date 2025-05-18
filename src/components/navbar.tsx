@@ -50,7 +50,7 @@ function MobileNavButton() {
       className="flex size-12 items-center justify-center self-center rounded-lg data-hover:bg-black/5 lg:hidden"
       aria-label="Open main menu"
     >
-      <Bars2Icon className="size-6" />
+      <Bars2Icon className="size-6 text-white" />
     </DisclosureButton>
   )
 }
