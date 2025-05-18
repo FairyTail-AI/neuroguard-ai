@@ -1,0 +1,20 @@
+services:
+  application:
+    image: APP_IMAGE
+    depends_on:
+      db:
+        condition: service_started
+        restart: true
+    restart: always
+    network_mode: host
+    volumes:
+      - ./certbot/www:/app/public/.well-known/acme-challenge
+  nginx:
+    image: nginx:alpine
+    restart: always
+    network_mode: host
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - application
