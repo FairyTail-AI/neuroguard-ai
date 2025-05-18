@@ -44,7 +44,7 @@ function Hero() {
         quantity={100}
       />
       <Gradient isDark className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset">
-        <div className='absolute bottom-3 right-2 z-20 bg-black w-40 h-18'/>
+        <div className='invisible md:visible absolute bottom-3 right-2 z-20 bg-black w-40 h-18'/>
       </Gradient>
       <Container className="relative z-20">
 
