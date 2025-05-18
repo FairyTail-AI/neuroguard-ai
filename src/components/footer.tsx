@@ -6,6 +6,7 @@ import { Link } from './link'
 import { Logo } from './logo'
 import { Subheading } from './text'
 import {INSTAGRAM_URL, LINKEDIN_URL, X_URL} from "@/lib/variables";
+import {ShimmerButton} from "@/components/magicui/shimmer-button";
 
 function CallToAction() {
   return (
@@ -21,10 +22,10 @@ function CallToAction() {
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
         Schedule your consultation today and join leading healthcare providers implementing our breakthrough detection technology.
       </p>
-      <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
+      <div className="flex justify-center mt-6">
+        <ShimmerButton className="w-full sm:w-auto" href="#">
           Get started
-        </Button>
+        </ShimmerButton>
       </div>
     </div>
   )
@@ -55,7 +56,7 @@ function Sitemap() {
       <div className="col-start-3">
         <SitemapHeading>Product</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
+          {/*<SitemapLink href="/pricing">Pricing</SitemapLink>*/}
           <SitemapLink href="/features">Features</SitemapLink>
           {/*<SitemapLink href="#">Analysis</SitemapLink>*/}
           {/*<SitemapLink href="#">API</SitemapLink>*/}

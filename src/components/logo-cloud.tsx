@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import {SHASHKIN_SITE_URL, SUNCAR_SITE_URL} from "@/lib/variables";
+import {NVIDIA_INCEPTION_SITE_URL, SHASHKIN_SITE_URL, SUNCAR_SITE_URL} from "@/lib/variables";
 
 export function LogoCloud({
   className,
@@ -25,7 +25,7 @@ export function LogoCloud({
           className="h-9 max-sm:mx-auto sm:h-8 lg:h-24"
         />
       </a>
-      <a href={SUNCAR_SITE_URL}>
+      <a href={NVIDIA_INCEPTION_SITE_URL}>
         <img
           alt="Nvidia"
           src="/logo-cloud/nvidia.svg"

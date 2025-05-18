@@ -23,6 +23,7 @@ import {OurServices} from "@/components/landing/sections/our-services";
 import {cn} from "@/lib/utils";
 import {Partners} from "@/components/landing/sections/partners";
 import {ScreenshotSection} from "@/components/landing/sections/screenshot-section";
+import {ShimmerButton} from "@/components/magicui/shimmer-button";
 
 export const metadata: Metadata = {
   description:
@@ -93,12 +94,9 @@ function Hero() {
             </span>
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">
+            <ShimmerButton href="#contacts">
               Request Demo
-            </Button>
-            <Button variant="secondary" href="/pricing">
-              See pricing
-            </Button>
+            </ShimmerButton>
           </div>
         </div>
 

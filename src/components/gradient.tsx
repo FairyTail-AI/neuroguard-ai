@@ -19,7 +19,7 @@ export function Gradient({
         // "bg-linear-115 from-green-400 to-blue-500"
         // 'bg-linear-115 from-black via-gray-900 to-teal-800'
         isDark && 'bg-gradient-to-tl from-black via-gray-900/90 to-black',
-        !isDark && 'bg-linear-115 from-sky-400 from-28% via-blue-900 via-70% to-teal-600 sm:bg-linear-145'
+        !isDark && 'bg-linear-115 from-gray-700 from-28% via-blue-900 via-70% to-teal-600 sm:bg-linear-145'
       )}
     />
   )
