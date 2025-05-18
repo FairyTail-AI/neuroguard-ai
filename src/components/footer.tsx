@@ -5,7 +5,7 @@ import { Gradient } from './gradient'
 import { Link } from './link'
 import { Logo } from './logo'
 import { Subheading } from './text'
-import {INSTAGRAM_URL, LINKEDIN_URL} from "@/lib/variables";
+import {INSTAGRAM_URL, LINKEDIN_URL, X_URL} from "@/lib/variables";
 
 function CallToAction() {
   return (
@@ -52,8 +52,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
 function Sitemap() {
   return (
     <>
-      <div />
-      <div>
+      <div className="col-start-3">
         <SitemapHeading>Product</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/pricing">Pricing</SitemapLink>
@@ -67,16 +66,16 @@ function Sitemap() {
         <SitemapLinks>
           {/*<SitemapLink href="#">Careers</SitemapLink>*/}
           <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/company">Company</SitemapLink>
+          {/*<SitemapLink href="/company">Company</SitemapLink>*/}
         </SitemapLinks>
       </div>
-      <div>
-        <SitemapHeading>Support</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
-        </SitemapLinks>
-      </div>
+      {/*<div>*/}
+      {/*  <SitemapHeading>Support</SitemapHeading>*/}
+      {/*  <SitemapLinks>*/}
+      {/*    <SitemapLink href="#">Help center</SitemapLink>*/}
+      {/*    <SitemapLink href="#">Community</SitemapLink>*/}
+      {/*  </SitemapLinks>*/}
+      {/*</div>*/}
       {/*<div>*/}
       {/*  <SitemapHeading>Company</SitemapHeading>*/}
       {/*  <SitemapLinks>*/}
@@ -131,6 +130,14 @@ function SocialLinks() {
   return (
     <>
       <Link
+        href={LINKEDIN_URL}
+        target="_blank"
+        aria-label="Visit us on LinkedIn"
+        className="text-gray-950 data-hover:text-gray-950/75"
+      >
+        <SocialIconLinkedIn className="size-4" />
+      </Link>
+      <Link
         href={INSTAGRAM_URL}
         target="_blank"
         aria-label="Visit us on Instagram"
@@ -139,12 +146,12 @@ function SocialLinks() {
         <SocialIconInstagram className="size-5" />
       </Link>
       <Link
-        href={LINKEDIN_URL}
+        href={X_URL}
         target="_blank"
         aria-label="Visit us on LinkedIn"
         className="text-gray-950 data-hover:text-gray-950/75"
       >
-        <SocialIconLinkedIn className="size-4" />
+        <SocialIconX className="size-4" />
       </Link>
     </>
   )
