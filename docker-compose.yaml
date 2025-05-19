@@ -2,8 +2,8 @@ services:
   application:
     image: APP_IMAGE
     restart: always
-    volumes:
-      - ./certbot/www:/app/public/.well-known/acme-challenge
+#    volumes:
+#      - ./certbot/www:/app/public/.well-known/acme-challenge
   nginx:
     image: nginx:alpine
     restart: always
