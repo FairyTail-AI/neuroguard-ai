@@ -161,7 +161,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="text-sm/6 text-gray-950">
-      &copy; {new Date().getFullYear()} NeuroGuard AI
+      &copy; {new Date().getFullYear()} NeuroGuard. All rights reserved.
     </div>
   )
 }
@@ -176,11 +176,14 @@ export function Footer() {
           <PlusGrid className="pb-16">
             <PlusGridRow>
               <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-                <div className="col-span-2 flex">
+                <div className="col-span-2 flex gap-x-8">
                   <PlusGridItem className="pt-6 lg:pb-6 flex items-center gap-2">
-                    <Logo className="h-9"/>
-                    <p className='font-display font-medium'>
-                      NeuroGuard AI
+                    <Logo className="h-9 w-auto flex" pathClassName="fill-black"/>
+                  </PlusGridItem>
+                  <PlusGridItem className="pt-6 lg:pb-6 flex items-center gap-2">
+                    <p className='font-display'>
+                      Kazakhstan, Almaty
+                      microdistrict 11, building 27, premise 4.
                     </p>
                   </PlusGridItem>
                 </div>

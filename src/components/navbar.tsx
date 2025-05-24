@@ -100,20 +100,22 @@ export function Navbar({
               <Link href="/" title="Home" className="flex items-center gap-2">
                 <Logo
                   className={cn(
-                    "h-9",
+                    "h-12"
+                  )}
+                  pathClassName={cn(
                     color === 'white' && 'fill-white',
                     color === 'black' && 'fill-black',
                   )}
                 />
-                <p
-                  className={cn(
-                    'font-display font-medium text-xl',
-                    color === 'white' && 'text-white',
-                    color === 'black' && 'text-black',
-                  )}
-                >
-                  NeuroGuard AI
-                </p>
+                {/*<p*/}
+                {/*  className={cn(*/}
+                {/*    'font-display font-medium text-xl',*/}
+                {/*    color === 'white' && 'text-white',*/}
+                {/*    color === 'black' && 'text-black',*/}
+                {/*  )}*/}
+                {/*>*/}
+                {/*  NeuroGuard AI*/}
+                {/*</p>*/}
               </Link>
             </PlusGridItem>
             {banner && (
