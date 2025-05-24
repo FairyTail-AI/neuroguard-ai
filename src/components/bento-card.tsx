@@ -17,7 +17,7 @@ export function BentoCard({
   className?: string
   eyebrow: React.ReactNode
   title: React.ReactNode
-  description: React.ReactNode
+  description?: React.ReactNode
   graphic?: React.ReactNode
   fade?: ('top' | 'bottom')[]
 }) {
@@ -52,9 +52,11 @@ export function BentoCard({
         <p className="mt-1 text-2xl/8 font-medium tracking-tight text-gray-950 group-data-dark:text-white">
           {title}
         </p>
-        <p className="mt-2 max-w-[600px] text-sm/6 text-gray-600 group-data-dark:text-gray-400">
-          {description}
-        </p>
+        {description && (
+          <p className="mt-2 max-w-[600px] text-sm/6 text-gray-600 group-data-dark:text-gray-400">
+            {description}
+          </p>
+        )}
       </div>
     </motion.div>
   )

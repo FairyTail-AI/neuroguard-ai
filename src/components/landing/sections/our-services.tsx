@@ -1,16 +1,19 @@
 import {Container} from "@/components/container";
-import {Heading, Subheading} from "@/components/text";
+import {Heading, Lead, Subheading} from "@/components/text";
 import {BentoCard} from "@/components/bento-card";
 
 export function OurServices() {
   return (
-    <Container>
+    <Container className="mx-2 mt-2 rounded-4xl pt-32">
       <Subheading>
         Empowering early detection and personalized neurological care with cutting-edge AI solutions.
       </Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
         Our Services
       </Heading>
+      <Lead className="mt-6 max-w-3xl text-gray-200/90">
+        NeuroGuard analyzes MRI scans and complex brainwave data (EEG) to detect early signs of cognitive decline with 98% prediction accuracy and unmatched speed — just 2 minutes per analysis.
+      </Lead>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard

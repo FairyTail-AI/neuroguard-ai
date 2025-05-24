@@ -24,6 +24,8 @@ import {cn} from "@/lib/utils";
 import {Partners} from "@/components/landing/sections/partners";
 import {ScreenshotSection} from "@/components/landing/sections/screenshot-section";
 import {ShimmerButton} from "@/components/magicui/shimmer-button";
+import {AnnounceSection} from "@/components/landing/sections/announce-section";
+import {DarkBentoSection} from "@/components/landing/sections/dark-bento-section";
 
 export const metadata: Metadata = {
   description:
@@ -86,12 +88,14 @@ function Hero() {
             {/*</span>*/}
             of early neurodegeneration.
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-200/75 sm:text-2xl/8">
+          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-200/90 sm:text-2xl/8">
             Transforming neurology with clinically-validated, cloud-based AI software that detects brain atrophy
             {' '}
             <span className="text-teal-500">
               before symptoms appear.
             </span>
+            {' '}
+            Faster. Smarter. More accurate.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <ShimmerButton href="#contacts">
@@ -115,6 +119,8 @@ export default function Home() {
 
       <main>
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
+          <AnnounceSection />
+          {/*<DarkBentoSection />*/}
           <ScreenshotSection />
           <OurServices />
         </div>

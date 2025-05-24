@@ -15,21 +15,21 @@ export function LogoCloud({
         <img
           alt="Shashkin Clinic "
           src="/logo-cloud/shashkin-clinic.svg"
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-24"
+          className="h-16 sm:h-9 max-sm:mx-auto sm:h-8 lg:h-24"
         />
       </a>
       <a href={SUNCAR_SITE_URL}>
         <img
           alt="Suncar Clinic"
           src="/logo-cloud/suncar.png"
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-24"
+          className="h-16 sm:h-9 max-sm:mx-auto sm:h-8 lg:h-24"
         />
       </a>
       <a href={NVIDIA_INCEPTION_SITE_URL}>
         <img
           alt="Nvidia"
           src="/logo-cloud/nvidia.svg"
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-24"
+          className="h-16 sm:h-9 max-sm:mx-auto sm:h-8 lg:h-24"
         />
       </a>
       {/*<img*/}
