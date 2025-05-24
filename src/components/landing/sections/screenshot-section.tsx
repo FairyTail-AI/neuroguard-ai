@@ -1,5 +1,4 @@
 import {Container} from "@/components/container";
-import {Heading, Lead} from "@/components/text";
 import {Screenshot} from "@/components/screenshot";
 import {Particles} from "@/components/magicui/particles";
 import {Gradient} from "@/components/gradient";
