@@ -32,8 +32,11 @@ ARG NEXT_PUBLIC_API_URL
 
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
-# Build application
+# Clean install to ensure all platform-specific binaries are downloaded
+RUN rm -rf node_modules package-lock.json
 RUN npm install
+
+# Build application
 RUN npm run build
 
 # Production image
